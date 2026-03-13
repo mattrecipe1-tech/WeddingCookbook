@@ -76,3 +76,22 @@ h1 {
     color: #666;
 }
 
+/*For mobile*/
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 5px;
+    }
+    .category-column {
+        padding: 10px;
+    }
+    .recipe-link {
+        font-size: 1.2em;
+        padding: 0.4em 0.6em;
+    }
+    .recipe-link img {
+        height: 1.2em !important;
+        margin-left: 0.5em;
+    }
+}
+
