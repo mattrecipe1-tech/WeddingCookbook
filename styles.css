@@ -1,43 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    background:
-        linear-gradient(135deg, #f8ecd4 0%, #f3e3c3 100%),
-        url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-    background-blend-mode: multiply;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #FFF4B8;
 }
 
-.center-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 h1 {
-    color: black;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.recipe-links a {
+.subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.categories-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-column {
+    flex: 1 1 250px;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    font-family: 'Brush Script MT', cursive;
+}
+
+.category-column h2 {
+    margin-top: 0;
+}
+
+.recipe-link {
     display: block;
-    margin-bottom: 8px;
-    text-align: center;
-    background: #fff;
-    color: black;
-    padding: 12px 24px;
-    border-radius 8px;
-    box-shadow 0 2px 6px rgba(0,0,0,0.06);
-    transition: box-shadow 0.2s;
-}
-
-.recipe-links a:hover {
-    background: #f0f0f0;
-    box-shadow 0 1px 2px rgba(0,0,0,0.10);
-    transition: box-shadow 0.2s;
-}
-
-a {
-    color: #5b3a29;
+    padding: 12px;
+    margin: 10px 0;
+    background: #FFE08A;
     text-decoration: none;
+    color: #333;
+    border-radius: 8px;
 }
+
+.footer-text {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
