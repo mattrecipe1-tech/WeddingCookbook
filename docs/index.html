@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baking Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="cookie.svg">
 </head>
 
 <body>
@@ -21,15 +23,15 @@
         <div class="category-column">
             <h2>Cookies</h2>
 
-            <a href="https://example.com/chocolate-chip" class="recipe-link">
+            <a href="https://example.com/chocolate-chip" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Chocolate Chip
             </a>
 
-            <a href="https://example.com/oatmeal-raisin" class="recipe-link">
+            <a href="https://example.com/oatmeal-raisin" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Oatmeal Raisin
             </a>
 
-            <a href="https://example.com/snickerdoodle" class="recipe-link">
+            <a href="https://example.com/snickerdoodle" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Snickerdoodle
             </a>
 
@@ -37,37 +39,48 @@
 
         <!-- Brownies Column -->
         <div class="category-column">
-            <h2>Brownies</h2>
+            <h2>Brownies and Bars</h2>
 
-            <a href="https://example.com/classic-brownies" class="recipe-link">
+            <a href="https://preppykitchen.com/brownie-bites/" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 <img src="images/brownie_bites.jpeg" alt="Brownie Bites">
                 Classic Brownies
             </a>
 
-            <a href="https://example.com/fudge-brownies" class="recipe-link">
-                Fudge Brownies
+            <a href="https://preppykitchen.com/brookies/" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/brookie.jpeg" alt="Brookie">
+                Brookie
             </a>
 
-            <a href="https://example.com/walnut-brownies" class="recipe-link">
+            <a href="https://example.com/walnut-brownies" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Walnut Brownies
             </a>
 
         </div>
 
-        <!-- Cakes Column -->
+        <!-- Pastries Column -->
         <div class="category-column">
-            <h2>Cakes</h2>
+            <h2>Pastries</h2>
 
-            <a href="https://example.com/chocolate-cake" class="recipe-link">
+            <a href="https://example.com/chocolate-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Chocolate Cake
             </a>
 
-            <a href="https://example.com/vanilla-cake" class="recipe-link">
+            <a href="https://example.com/vanilla-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Vanilla Cake
             </a>
 
-            <a href="https://example.com/lemon-cake" class="recipe-link">
+            <a href="https://example.com/lemon-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 Lemon Cake
+            </a>
+
+        </div>
+
+        <!-- Other Treats Column -->
+        <div class="category-column">
+            <h2>Other Treats</h2>
+
+            <a href="https://example.com/chocolate-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                Chocolate Strawberry Macarons
             </a>
 
         </div>
@@ -76,9 +89,36 @@
 
     <p class="footer-text">
         More recipes coming soon!
+        <br><br>
+        <span id="lastUpdated">Last updated: March 18, 2026</span>
     </p>
 
 </div>
+
+<button id="backToTop" class="back-to-top">↑ Top</button>
+
+<script>
+    // Display current date as last updated
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-US', options);
+    document.getElementById('lastUpdated').textContent = `Last updated: ${formattedDate}`;
+
+    // Show/hide back-to-top button
+    window.addEventListener('scroll', function() {
+        const backToTopBtn = document.getElementById('backToTop');
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll to top smoothly
+    document.getElementById('backToTop').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 
 </body>
 </html>

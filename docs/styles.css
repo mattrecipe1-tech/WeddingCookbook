@@ -29,6 +29,7 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .category-column {
@@ -46,15 +47,15 @@ h1 {
 .recipe-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px;
+    justify-content: flex-start;
+    gap: 0.75em;
+    padding: 0.6em 1.2em;
     margin: 10px 0;
     background: #FFE08A;
     text-decoration: none;
     color: #333;
     border-radius: 8px;
     font-size: 2.4em;
-    padding: 0.6em 1.2em;
 }
 
 .recipe-link:hover {
@@ -63,10 +64,10 @@ h1 {
 }
 
 .recipe-link img {
-    height: 1.8em !important;
+    height: 2.4em !important;
     width: auto;
     vertical-align: middle;
-    margin-right: 0;
+    margin-right: 0.2em;
     flex-shrink: 0;
 }
 
@@ -74,6 +75,34 @@ h1 {
     margin-top: 40px;
     font-size: 14px;
     color: #666;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background: #FFE08A;
+    color: #333;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #7C5E2A;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
 }
 
 /*For mobile*/
@@ -90,8 +119,8 @@ h1 {
         padding: 0.4em 0.6em;
     }
     .recipe-link img {
-        height: 1.2em !important;
-        margin-left: 0.5em;
+        height: 1.6em !important;
+        margin-left: 0;
     }
 }
 
