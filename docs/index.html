@@ -23,16 +23,14 @@
         <div class="category-column">
             <h2>Cookies</h2>
 
-            <a href="https://example.com/chocolate-chip" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Chocolate Chip
+            <a href="https://preppykitchen.com/chewy-chocolate-chip-cookies/" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/choc_chip_cookies.jpeg" alt="Chocolate Chip">
+                <span>Chocolate Chip</span>
             </a>
 
-            <a href="https://example.com/oatmeal-raisin" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Oatmeal Raisin
-            </a>
-
-            <a href="https://example.com/snickerdoodle" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Snickerdoodle
+            <a href="https://www.amazon.com/100-Cookies-Kitchen-Classic-Brownies/dp/1452180733" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/roll_up_cookies.jpeg" alt="Roll Up">
+                <span>Roll Up</span>
             </a>
 
         </div>
@@ -43,17 +41,11 @@
 
             <a href="https://preppykitchen.com/brownie-bites/" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 <img src="images/brownie_bites.jpeg" alt="Brownie Bites">
-                Classic Brownies
-            </a>
+                <span>Brownie Bites</span></a>
 
             <a href="https://preppykitchen.com/brookies/" class="recipe-link" target="_blank" rel="noopener noreferrer">
                 <img src="images/brookie.jpeg" alt="Brookie">
-                Brookie
-            </a>
-
-            <a href="https://example.com/walnut-brownies" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Walnut Brownies
-            </a>
+                <span>Brookie</span></a>
 
         </div>
 
@@ -61,16 +53,14 @@
         <div class="category-column">
             <h2>Pastries</h2>
 
-            <a href="https://example.com/chocolate-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Chocolate Cake
+            <a href="https://preppykitchen.com/chocolate-chocolate-donuts/" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/donuts.jpeg" alt="Chocolate Donuts">
+                <span>Chocolate Donuts</span>
             </a>
 
             <a href="https://example.com/vanilla-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Vanilla Cake
-            </a>
-
-            <a href="https://example.com/lemon-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Lemon Cake
+                <img src="images/vanilla_cake.jpeg" alt="Vanilla Cake">
+                <span>Vanilla Cake </span>
             </a>
 
         </div>
@@ -79,8 +69,9 @@
         <div class="category-column">
             <h2>Other Treats</h2>
 
-            <a href="https://example.com/chocolate-cake" class="recipe-link" target="_blank" rel="noopener noreferrer">
-                Chocolate Strawberry Macarons
+            <a href="https://preppykitchen.com/french-macarons/" class="recipe-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/macarons.jpeg" alt="Chocolate Strawberry Macarons">
+                <span>Chocolate Strawberry Macarons</span>
             </a>
 
         </div>
@@ -88,7 +79,7 @@
     </div>
 
     <p class="footer-text">
-        More recipes coming soon!
+        Updates are currently baking!
         <br><br>
         <span id="lastUpdated">Last updated: March 18, 2026</span>
     </p>
@@ -97,28 +88,11 @@
 
 <button id="backToTop" class="back-to-top">↑ Top</button>
 
-<script>
-    // Display current date as last updated
-    const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = today.toLocaleDateString('en-US', options);
-    document.getElementById('lastUpdated').textContent = `Last updated: ${formattedDate}`;
-
-    // Show/hide back-to-top button
-    window.addEventListener('scroll', function() {
-        const backToTopBtn = document.getElementById('backToTop');
-        if (window.scrollY > 300) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-
-    // Scroll to top smoothly
-    document.getElementById('backToTop').addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
+
+<!--TODO
+add icon for book vs website
+-->

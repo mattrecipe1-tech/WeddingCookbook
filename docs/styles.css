@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
     background: #FFF4B8;
     font-family: 'Brush Script MT', cursive;
+    font-family: Georgia, Serif;
 
 }
 
@@ -42,13 +42,14 @@ h1 {
 
 .category-column h2 {
     margin-top: 0;
+    font-size: 3.5em;
 }
 
 .recipe-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 3em 1fr;
     gap: 0.75em;
+    align-items: center;
     padding: 0.6em 1.2em;
     margin: 10px 0;
     background: #FFE08A;
@@ -64,11 +65,16 @@ h1 {
 }
 
 .recipe-link img {
-    height: 2.4em !important;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 0.2em;
-    flex-shrink: 0;
+    height: 3em;
+    width: 3em;
+    object-fit: cover;
+    display: block;
+    grid-column: 1;
+}
+
+.recipe-link span {
+    text-align: left;
+    grid-column: 2;
 }
 
 .footer-text {
@@ -117,10 +123,11 @@ h1 {
     .recipe-link {
         font-size: 1.2em;
         padding: 0.4em 0.6em;
+        grid-template-columns: 2em 1fr;
     }
     .recipe-link img {
-        height: 1.6em !important;
-        margin-left: 0;
+        height: 2em;
+        width: 2em;
     }
 }
 
